@@ -111,5 +111,6 @@ int ping_read() {
     trigger_ping();
     while (edgeCount < 2);
     int delta = timeRisingEdge - timeFallingEdge;
+    edgeCount = 0;
     return delta_to_distance(delta);
 }

@@ -2,9 +2,49 @@
 #include <stdbool.h>
 #include "uart.h"
 #include <math.h>
-
+#include "servo.h"
+#include "adc.h"
+#include "ping.h"
+#include "movement.h"
 #define _OPEN_SYS_ITOA_EXT
 
+
+double r =0;
+double c= 0;
+
+void findRC(oi_t *sensor){
+    servo_move(90);
+    int x = 0;
+    double ir1;
+    double ir2;
+    double ping1;
+    double ping2;
+        while (x < 16)
+        {
+            adc_read();
+            x++;
+        }
+        ir1 = adc_read();
+
+        ping1 = ping_read();
+        move_backward(sensor, 300);
+        x = 0;
+        adc_init();
+        while (x < 16)
+        {
+            adc_read();
+            x++;
+        }
+            ir2 = adc_read();
+
+            ping2 = ping_read();
+
+        r = irFindR(ping1, ping2, ir1, ir2);
+        c = irFindC(r, ping1, ir1);
+        lcd_printf("C = %.10lf\nR = %.10lf", c, r);
+
+
+    }
 
 
 void reverse(char str[], int length)
@@ -88,6 +128,19 @@ char getSocket(){
         // Only send a '\n' if the first byte of the command is not a '\n',
         // to avoid sending back-to-back '\n' to the client
        return my_data;
+}
+
+void scan180(float vals[],float IRvals[]){
+    ping_init();
+     int angle = 0;
+     int i = 0;
+       for(angle = 0; angle <= 180; angle += 2){
+           servo_move(angle);
+           vals[i] = ping_read();
+           IRvals[i] = convertRawIR(adc_read(),r,c);
+           i++;
+
+       }
 }
 
 int scnrAnalysis(float vals[], object *results, float IRvals[])
@@ -201,3 +254,4 @@ int scnrAnalysis(float vals[], object *results, float IRvals[])
     }
     return numResult;
 }
+
