@@ -89,3 +89,35 @@ void turn_counter_clockwise(oi_t *sensor, int degrees){
    }
    oi_setWheels(0, 0);
 }
+
+short boundDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
+    short result = 0;
+    oi_update(oi);
+    if ((oi->cliffLeftSignal >= 2700) || (oi->cliffFrontLeftSignal >= 2700))
+    {
+        result = -1;
+    }
+    else if ((oi->cliffRightSignal >= 2700)|| (oi->cliffFrontRightSignal >= 2700))
+    {
+        result = 1;
+    }
+    else
+    {
+        result = 0;
+    }
+
+    return result;
+}
+
+void boundAvoid(oi_t *oi){
+    short bound = boundDetect(oi);
+
+    if (bound == 1){
+        move_backward(oi, 100);
+        turn_counter_clockwise(oi, 90);
+    } else if (bound == -1){
+        move_backward(oi, 100);
+        turn_clockwise(oi, 90);
+    } else {
+        return;
+    }
