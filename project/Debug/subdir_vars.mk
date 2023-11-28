@@ -14,6 +14,7 @@ C_SRCS += \
 ../helpers.c \
 ../lcd.c \
 ../main.c \
+../manual_control.c \
 ../movement.c \
 ../open_interface.c \
 ../ping.c \
@@ -27,6 +28,7 @@ C_DEPS += \
 ./helpers.d \
 ./lcd.d \
 ./main.d \
+./manual_control.d \
 ./movement.d \
 ./open_interface.d \
 ./ping.d \
@@ -40,6 +42,7 @@ OBJS += \
 ./helpers.obj \
 ./lcd.obj \
 ./main.obj \
+./manual_control.obj \
 ./movement.obj \
 ./open_interface.obj \
 ./ping.obj \
@@ -53,6 +56,7 @@ OBJS__QUOTED += \
 "helpers.obj" \
 "lcd.obj" \
 "main.obj" \
+"manual_control.obj" \
 "movement.obj" \
 "open_interface.obj" \
 "ping.obj" \
@@ -66,6 +70,7 @@ C_DEPS__QUOTED += \
 "helpers.d" \
 "lcd.d" \
 "main.d" \
+"manual_control.d" \
 "movement.d" \
 "open_interface.d" \
 "ping.d" \
@@ -79,6 +84,7 @@ C_SRCS__QUOTED += \
 "../helpers.c" \
 "../lcd.c" \
 "../main.c" \
+"../manual_control.c" \
 "../movement.c" \
 "../open_interface.c" \
 "../ping.c" \

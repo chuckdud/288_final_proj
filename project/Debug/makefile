@@ -15,6 +15,7 @@ ORDERED_OBJS += \
 "./helpers.obj" \
 "./lcd.obj" \
 "./main.obj" \
+"./manual_control.obj" \
 "./movement.obj" \
 "./open_interface.obj" \
 "./ping.obj" \
@@ -152,8 +153,8 @@ project.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Timer.obj" "adc.obj" "helpers.obj" "lcd.obj" "main.obj" "movement.obj" "open_interface.obj" "ping.obj" "servo.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
-	-$(RM) "Timer.d" "adc.d" "helpers.d" "lcd.d" "main.d" "movement.d" "open_interface.d" "ping.d" "servo.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
+	-$(RM) "Timer.obj" "adc.obj" "helpers.obj" "lcd.obj" "main.obj" "manual_control.obj" "movement.obj" "open_interface.obj" "ping.obj" "servo.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
+	-$(RM) "Timer.d" "adc.d" "helpers.d" "lcd.d" "main.d" "manual_control.d" "movement.d" "open_interface.d" "ping.d" "servo.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

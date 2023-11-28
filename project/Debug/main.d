@@ -31,6 +31,7 @@ main.obj: ../servo.h
 main.obj: ../adc.h
 main.obj: ../ping.h
 main.obj: ../movement.h
+main.obj: ../manual_control.h
 
 ../main.c:
 
@@ -93,4 +94,6 @@ C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 ../ping.h:
 
 ../movement.h:
+
+../manual_control.h:
 
