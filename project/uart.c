@@ -99,7 +99,7 @@ void uart_sendStr(const char *data)
         i++;
 
     }
-    uart_sendChar('\r');
+    uart_sendChar('\r'); // TODO:: (Why) Do we need to attach this '\n' to every string? - Charlie
 }
 
 // _PART3

@@ -23,6 +23,7 @@ int main(void)
     ping_init();
     timer_init();
     lcd_init();
+    lcd_clear();
 
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
 
