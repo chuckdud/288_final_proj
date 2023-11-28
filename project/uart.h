@@ -30,6 +30,8 @@ char uart_receive(void);
 
 char uart_receive_blocking(void);
 
+char *uart_receive_server(void);
+
 void uart_sendStr(const char *data);
 
 void uart_interrupt_init();
