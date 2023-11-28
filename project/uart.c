@@ -63,12 +63,31 @@ char uart_receive(void)
     UART1_DR_R &= ~(0xFF);
     return result;
 }
+
 char uart_receive_blocking(void)
 {
     while (UART1_FR_R & 0b10000);
 
     char result = (char) (UART1_DR_R & 0x7F);
     return result;
+}
+
+char *uart_receive_server(void)
+{
+    char tmp;
+    static char data[50];
+    int index = 0;
+    tmp = uart_receive(); // Get first byte of the command from the Client
+
+    // Get the rest of the command until a newline byte (i.e., '\n') received
+    while(tmp != '\n' )
+    {
+      data[index] = tmp;  // Place byte into the command buffer
+      index++;
+      tmp = uart_receive(); // Get the next byte of the command
+    }
+
+    return data;
 }
 
 void uart_sendStr(const char *data)
