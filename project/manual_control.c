@@ -65,7 +65,7 @@ void user_move_forward(oi_t *sensor) {
     uart_sendStr(response);
     char *cmd = uart_receive_server();
     if (strcmp(cmd, "x") == 0) return;
-    move_forward(sensor, number);
+    move_forward(sensor, number * 10);
 }
 
 void user_move_backward(oi_t *sensor) {
@@ -75,7 +75,7 @@ void user_move_backward(oi_t *sensor) {
     uart_sendStr(response);
     char *cmd = uart_receive_server();
     if (strcmp(cmd, "x") == 0) return;
-    move_backward(sensor, number);
+    move_backward(sensor, number * 10);
 }
 
 void drive(oi_t *sensor)

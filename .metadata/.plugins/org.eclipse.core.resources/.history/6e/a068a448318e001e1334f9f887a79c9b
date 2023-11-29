@@ -1,0 +1,98 @@
+/*
+ * simple_mission.c
+ *
+ *  Created on: Nov 8, 2023
+ *      Author: cddudley
+ */
+
+#include "movement.h"
+#include "uart.h"
+#include "ping.h"
+#include "servo.h"
+#include "adc.h"
+#include "lcd.h"
+#include "open_interface.h"
+#include "stdlib.h"
+#include "Timer.h"
+#include "manual_control.h"
+
+//extern volatile char flag;
+
+/**
+ * Receive a numerical command from server for distance or angle. Should be moved elsewhere.
+ */
+int receive_number(char *command) {
+    command = uart_receive_server();
+    while (!atoi(command)) {
+        uart_sendStr("Invalid input. Please input a number. Enter 0 to cancel.");
+        command = uart_receive_server();
+    }
+    return atoi(command);
+}
+
+void drive(oi_t *sensor)
+{
+    char *command;
+    int number;
+    while (1)
+    {
+        uart_sendStr("Please select drive mode (manual, auto).");
+        command = uart_receive_server();
+        if (strcmp(command, "manual") == 0)
+        {
+            uart_sendStr("Entering manual mode. Please input direction (w, a, s, d).");
+            while (strcmp(command, "auto") != 0)
+            {
+                command = uart_receive_server();
+                if (strcmp(command, "w") == 0)
+                {
+                    uart_sendStr("Moving forward. Please input distance (cm).");
+                    number = receive_number(command);
+                    move_forward(sensor, number);
+                }
+                else if (strcmp(command, "s") == 0)
+                {
+                    uart_sendStr("Moving backward. Please input distance (cm).");
+                    number = receive_number(command);
+                    move_backward(sensor, number);
+                }
+                else if (strcmp(command, "a") == 0)
+                {
+                    uart_sendStr("Turning clockwise. Please enter angle (degrees).");
+                    number = receive_number(command);
+                    turn_counter_clockwise(sensor, number);
+                }
+                else if (strcmp(command, "d") == 0)
+                {
+                    uart_sendStr("Turning counterclockwise. Please enter angle (degrees).");
+                    number = receive_number(command);
+                    turn_clockwise(sensor, number);
+                }
+                else if (strcmp(command, "scan") == 0)
+                {
+                    // scan
+                }
+                //                else if (command_char == 'm')
+                //                {
+                //                    uart_sendStr("scanning\n");
+                //                    scan_180(points);
+                //                    print_180(points);
+                //
+                //                    find_smallest_object(points, objects);
+                //                    timer_waitMicros(1000);
+                //                    scan_Ping(objects);
+                //                }
+            }
+        }
+        if (strcmp(command, "auto") == 0)
+        {
+            uart_sendStr("Entering autonomous mode.");
+            while (strcmp(command, "manual") != 0) command = uart_receive_server();
+
+        }
+        if (strcmp(command, "quit") == 0) break;
+        else uart_sendStr("Invalid command.");
+    }
+    oi_free(sensor);
+}
+
