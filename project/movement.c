@@ -54,6 +54,8 @@ void move_forward(oi_t *sensor, int milimeters){
         oi_update(sensor);
         if (bumped(sensor)) {
             oi_setWheels(0, 0);
+            // TODO::
+            // remove so that it is easier to track movements
             avoid_obstacle(sensor);
             oi_setWheels(forward_speed, forward_speed);
             oi_init(sensor);

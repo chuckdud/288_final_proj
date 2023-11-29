@@ -1,0 +1,139 @@
+/*
+ * simple_mission.c
+ *
+ *  Created on: Nov 8, 2023
+ *      Author: cddudley
+ */
+
+#include "movement.h"
+#include "uart.h"
+#include "ping.h"
+#include "servo.h"
+#include "adc.h"
+#include "lcd.h"
+#include "open_interface.h"
+#include "stdlib.h"
+#include "Timer.h"
+#include "manual_control.h"
+
+char *command;
+char response[50];
+int number;
+
+/**
+ * Receive a numerical command from server for distance or angle. Should be moved elsewhere.
+ */
+int receive_number() {
+    char *cmd = uart_receive_server();
+    while (!atoi(cmd)) {
+        uart_sendStr("Invalid input. Please input a number. Enter 0 to cancel.");
+        cmd = uart_receive_server();
+    }
+    return atoi(cmd);
+}
+
+/**
+ * TODO::
+ * Refactor these methods (DRY) but I am not going to put effort into it yet.
+ *
+ * Also might move them to new file...?
+ */
+void user_turn_counterclockwise(oi_t *sensor) {
+    uart_sendStr("Turning counterclockwise. Please enter angle (degrees).");
+    int number = receive_number();
+    sprintf(response, "Turning %d degrees counterclockwise. Input 'x' to cancel this action.", number);
+    uart_sendStr(response);
+    char *cmd = uart_receive_server();
+    if (strcmp(cmd, "x") == 0) return;
+    turn_counter_clockwise(sensor, number);
+}
+
+void user_turn_clockwise(oi_t *sensor) {
+    uart_sendStr("Turning clockwise. Please enter angle (degrees).");
+    int number = receive_number();
+    sprintf(response, "Turning %d degrees clockwise. Input 'x' to cancel this action.", number);
+    uart_sendStr(response);
+    char *cmd = uart_receive_server();
+    if (strcmp(cmd, "x") == 0) return;
+    turn_clockwise(sensor, number);
+}
+
+void user_move_forward(oi_t *sensor) {
+    uart_sendStr("Moving forward. Please input distance (cm).");
+    number = receive_number();
+    sprintf(response, "Moving %d cm forward. Input 'x' to cancel this action.", number);
+    uart_sendStr(response);
+    char *cmd = uart_receive_server();
+    if (strcmp(cmd, "x") == 0) return;
+    move_forward(sensor, number * 10);
+}
+
+void user_move_backward(oi_t *sensor) {
+    uart_sendStr("Moving backward. Please input distance (cm).");
+    number = receive_number();
+    sprintf(response, "Moving %d cm backward. Input 'x' to cancel this action.", number);
+    uart_sendStr(response);
+    char *cmd = uart_receive_server();
+    if (strcmp(cmd, "x") == 0) return;
+    move_backward(sensor, number * 10);
+}
+
+void drive(oi_t *sensor)
+{
+    while (1)
+    {
+        uart_sendStr("Please select drive mode (manual, auto). Input 'quit' to quit.");
+        command = uart_receive_server();
+        if (strcmp(command, "manual") == 0)
+        {
+            char repeat = 0;
+            uart_sendStr("Entering manual mode. Please input direction for manual control (w, a, s, d). Input 'exit' to return to mode selection.");
+            while (strcmp(command, "exit") != 0)
+            {
+                // don't print this message the first time
+                if (repeat) uart_sendStr("In Manual Mode. Please input direction for manual control (w, a, s, d). Input 'exit' to return to mode selection.");
+                command = uart_receive_server();
+                if (strcmp(command, "w") == 0)
+                {
+                    user_move_forward(sensor);
+                }
+                else if (strcmp(command, "s") == 0)
+                {
+                    user_move_backward(sensor);
+                }
+                else if (strcmp(command, "a") == 0)
+                {
+                    user_turn_counterclockwise(sensor);
+                }
+                else if (strcmp(command, "d") == 0)
+                {
+                    user_turn_clockwise(sensor);
+                }
+                else if (strcmp(command, "scan") == 0)
+                {
+                    // TODO::
+                    // scan, gather info on objects
+                }
+                repeat = 1;
+            }
+        }
+        else if (strcmp(command, "auto") == 0)
+        {
+            char repeat = 0;
+            uart_sendStr("Entering autonomous mode. Input 'exit' to return to mode selection.");
+            while (strcmp(command, "exit") != 0) {
+                if (repeat) uart_sendStr("In autonomous mode. Input 'exit' to return to mode selection.");
+                command = uart_receive_server();
+                repeat = 1;
+            }
+        }
+        else if (strcmp(command, "quit") == 0) {
+            lcd_printf("QUITTING!");
+            break;
+        }
+        // TODO:: create some kind of message for invalid input.... as it currently stands its easier to just serve same info as first time. maybe thats fine?
+//        else uart_sendStr("Invalid command.");
+    }
+    oi_free(sensor);
+}
+

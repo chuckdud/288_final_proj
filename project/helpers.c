@@ -9,8 +9,8 @@
 #define _OPEN_SYS_ITOA_EXT
 
 
-double r =0;
-double c= 0;
+double r = -1.1327539289;
+double c =  82028.1353831678;
 
 void findRC(oi_t *sensor){
     servo_move(90);
@@ -19,32 +19,30 @@ void findRC(oi_t *sensor){
     double ir2;
     double ping1;
     double ping2;
-        while (x < 16)
-        {
-            adc_read();
-            x++;
-        }
-        ir1 = adc_read();
-
-        ping1 = ping_read();
-        move_backward(sensor, 300);
-        x = 0;
-        adc_init();
-        while (x < 16)
-        {
-            adc_read();
-            x++;
-        }
-            ir2 = adc_read();
-
-            ping2 = ping_read();
-
-        r = irFindR(ping1, ping2, ir1, ir2);
-        c = irFindC(r, ping1, ir1);
-        lcd_printf("C = %.10lf\nR = %.10lf", c, r);
-
-
+    while (x < 16)
+    {
+        adc_read();
+        x++;
     }
+    ir1 = adc_read();
+
+    ping1 = ping_read();
+    move_backward(sensor, 300);
+    x = 0;
+    adc_init();
+    while (x < 16)
+    {
+        adc_read();
+        x++;
+    }
+    ir2 = adc_read();
+
+    ping2 = ping_read();
+
+    r = irFindR(ping1, ping2, ir1, ir2);
+    c = irFindC(r, ping1, ir1);
+    lcd_printf("C = %.10lf\nR = %.10lf", c, r);
+}
 
 
 void reverse(char str[], int length)
@@ -106,41 +104,53 @@ char* itoa(int num, char *str, int base)
 
 char getSocket(){
     int index = 0;  // Set index to the beginning of the command buffer
-        char my_data = uart_receive(); // Get first byte of the command from the Client
-        //char command[3];
-        // Get the rest of the command until a newline byte (i.e., '\n') received
-//        while(my_data != ('\n' || '\x17') )
-//        {
-//          command[index] = my_data;  // Place byte into the command buffer
-//          index++;
-//          my_data = uart_receive(); // Get the next byte of the command
-//        }
+    char my_data = uart_receive(); // Get first byte of the command from the Client
+    //char command[3];
+    // Get the rest of the command until a newline byte (i.e., '\n') received
+    //        while(my_data != ('\n' || '\x17') )
+    //        {
+    //          command[index] = my_data;  // Place byte into the command buffer
+    //          index++;
+    //          my_data = uart_receive(); // Get the next byte of the command
+    //        }
 
-        //command[index] = '\n';  // place newline into command in case one wants to echo the full command back to the Client
-        //command[index] = 0;   // End command C-string with a NULL byte so that functions like printf know when to stop printing
+    //command[index] = '\n';  // place newline into command in case one wants to echo the full command back to the Client
+    //command[index] = 0;   // End command C-string with a NULL byte so that functions like printf know when to stop printing
 
-        //lcd_printf("Got: %s", command);  // Print received command to the LCD screen
+    //lcd_printf("Got: %s", command);  // Print received command to the LCD screen
 
-        // Send a response to the Client (Starter Client expects the response to end with \n)
-        // In this case I am just sending back the first byte of the command received and a '\n'
-        //uart_sendStr("Command Received\n");
-       // uart_sendChar('\n');
-        // Only send a '\n' if the first byte of the command is not a '\n',
-        // to avoid sending back-to-back '\n' to the client
-       return my_data;
+    // Send a response to the Client (Starter Client expects the response to end with \n)
+    // In this case I am just sending back the first byte of the command received and a '\n'
+    //uart_sendStr("Command Received\n");
+    // uart_sendChar('\n');
+    // Only send a '\n' if the first byte of the command is not a '\n',
+    // to avoid sending back-to-back '\n' to the client
+    return my_data;
 }
 
-void scan180(float vals[],float IRvals[]){
-    ping_init();
-     int angle = 0;
-     int i = 0;
-       for(angle = 0; angle <= 180; angle += 2){
-           servo_move(angle);
-           vals[i] = ping_read();
-           IRvals[i] = convertRawIR(adc_read(),r,c);
-           i++;
+void send180(int *pings, float *IRvals) {
+    int i = 0;
+    char data[10];
+    sprintf(data, "%d", 1);
+    scan180(pings, IRvals);
+    for (i = 0; i < 90; i++) {
+        sprintf(data, "%d", pings[i]);
+        uart_sendStr(data);
+        sprintf(data, "%.1f", IRvals[i]);
+        uart_sendStr(data);
+    }
+}
 
-       }
+void scan180(int pings[], float IRvals[]){
+    int angle = 0;
+    int i = 0;
+    for(angle = 0; angle <= 180; angle += 2){
+        servo_move(angle);
+        pings[i] = ping_read();
+        IRvals[i] = convertRawIR(adc_read(),r,c);
+        i++;
+
+    }
 }
 
 int scnrAnalysis(float vals[], object *results, float IRvals[])

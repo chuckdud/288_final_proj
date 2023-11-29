@@ -27,16 +27,16 @@ int main(void)
 
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
 
-    if(uart_receive_blocking() =='c'){
-        findRC(sensor);
-    }
-    float vals[90];
-    float IRvals[90];
-    object results[5];
+//    if(uart_receive_blocking() =='c'){
+//        findRC(sensor);
+//    }
+//    float int[90];
+//    float IRvals[90];
+//    object results[5];
 
     // findRC()
-    scan180(vals,IRvals);
-    scnrAnalysis(vals, results,IRvals);
-    oi_free(sensor);
+//    scan180(vals,IRvals);
+//    scnrAnalysis(vals, results,IRvals);
+//    oi_free(sensor);
     return 0;
 }

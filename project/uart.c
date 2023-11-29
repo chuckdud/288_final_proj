@@ -100,6 +100,11 @@ void uart_sendStr(const char *data)
 
     }
     uart_sendChar('\r'); // TODO:: (Why) Do we need to attach this '\n' to every string? - Charlie
+                         /**
+                          * clear to remove the \r, but will have to manually send \n with each string
+                          *     python client DOES require \n at end of each 'line'
+                          *     (send_char() above automatically sends \n if it sends a \r)
+                          */
 }
 
 // _PART3

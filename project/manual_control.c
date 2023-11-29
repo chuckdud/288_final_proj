@@ -15,6 +15,7 @@
 #include "stdlib.h"
 #include "Timer.h"
 #include "manual_control.h"
+#include "helpers.h"
 
 char *command;
 char response[50];
@@ -113,6 +114,13 @@ void drive(oi_t *sensor)
                 {
                     // TODO::
                     // scan, gather info on objects
+                    int pings[90];
+                    float IRvals[90];
+                    send180(pings, IRvals);
+                }
+                else if (strcmp(command, "calibrate") == 0)
+                {
+                    findRC(sensor);
                 }
                 repeat = 1;
             }
