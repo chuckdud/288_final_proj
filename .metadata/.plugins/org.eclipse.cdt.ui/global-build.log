@@ -2054,3 +2054,2078 @@ Finished building target: "project.out"
 gmake[1]: 'project.out' is up to date.
 
 **** Build Finished ****
+
+**** Clean-only build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 clean -O 
+ 
+DEL /F  "project.out" 
+DEL /F "MissionTrue.obj" "Timer.obj" "adc.obj" "helpers.obj" "lcd.obj" "main.obj" "manual_control.obj" "movement.obj" "open_interface.obj" "ping.obj" "servo.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
+DEL /F "MissionTrue.d" "Timer.d" "adc.d" "helpers.d" "lcd.d" "main.d" "manual_control.d" "movement.d" "open_interface.d" "ping.d" "servo.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../MissionTrue.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="MissionTrue.d_raw"  "../MissionTrue.c"
+Finished building: "../MissionTrue.c"
+ 
+Building file: "../Timer.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Timer.d_raw"  "../Timer.c"
+Finished building: "../Timer.c"
+ 
+Building file: "../lcd.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="lcd.d_raw"  "../lcd.c"
+Finished building: "../lcd.c"
+ 
+Building file: "../adc.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="adc.d_raw"  "../adc.c"
+Finished building: "../adc.c"
+ 
+Building file: "../ping.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ping.d_raw"  "../ping.c"
+Finished building: "../ping.c"
+ 
+Building file: "../tm4c123gh6pm_startup_ccs.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d_raw"  "../tm4c123gh6pm_startup_ccs.c"
+Finished building: "../tm4c123gh6pm_startup_ccs.c"
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+Finished building: "../manual_control.c"
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 108: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 191: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 211: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 241: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building file: "../servo.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="servo.d_raw"  "../servo.c"
+Finished building: "../servo.c"
+ 
+Building file: "../uart.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart.d_raw"  "../uart.c"
+Finished building: "../uart.c"
+ 
+Building file: "../open_interface.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="open_interface.d_raw"  "../open_interface.c"
+"../open_interface.c", line 356: warning #179-D: variable "charging_state" was declared but never referenced
+Finished building: "../open_interface.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 31: error #66: expected a ";"
+"../main.c", line 30: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #112-D: statement is unreachable
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 30: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 30: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 31: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 33: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 23: error #167: too few arguments in function call
+"../main.c", line 31: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 34: warning #112-D: statement is unreachable
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 31: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 34: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"..\helpers.h", line 18: warning #377-D: declaration requires a typedef name
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 260: error #20: identifier "directions" is undefined
+1 error detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\helpers.h", line 18: warning #377-D: declaration requires a typedef name
+"../main.c", line 31: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 34: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 31: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 34: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 283: warning #179-D: variable "i" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 290: error #515: a value of type "directions" cannot be assigned to an entity of type "directions *"
+1 error detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 110: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 193: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 213: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 243: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 79: warning #225-D: function "trackAngles" declared implicitly
+"../movement.c", line 79: error #20: identifier "givenDirs" is undefined
+1 error detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #45: expression must have pointer type
+"../helpers.c", line 264: error #45: expression must have pointer type
+"../helpers.c", line 270: error #45: expression must have pointer type
+"../helpers.c", line 271: error #45: expression must have pointer type
+"../helpers.c", line 280: error #20: identifier "givenDir" is undefined
+5 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 31: warning #179-D: variable "num" was declared but never referenced
+"../main.c", line 32: warning #179-D: variable "num2" was declared but never referenced
+"../main.c", line 34: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+Finished building: "../movement.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+gmake[1]: 'project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+Finished building: "../helpers.c"
+ 
+Building target: "project.out"
+Invoking: Arm Linker
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"project.map" --heap_size=1024 --stack_size=4096 -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="project_linkInfo.xml" --rom_model -o "project.out" "./MissionTrue.obj" "./Timer.obj" "./adc.obj" "./helpers.obj" "./lcd.obj" "./main.obj" "./manual_control.obj" "./movement.obj" "./open_interface.obj" "./ping.obj" "./servo.obj" "./tm4c123gh6pm_startup_ccs.obj" "./uart.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" 
+<Linking>
+Finished building target: "project.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 181: warning #176-D: expression has no effect
+"../movement.c", line 181: error #66: expected a ";"
+"../movement.c", line 184: error #169: argument of type "directions" is incompatible with parameter of type "int"
+"../movement.c", line 186: error #32: expression must have arithmetic type
+"../movement.c", line 190: error #32: expression must have arithmetic type
+"../movement.c", line 192: error #169: argument of type "directions" is incompatible with parameter of type "int"
+5 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 37: error #145: a value of type "void" cannot be used to initialize an entity of type "int"
+"../main.c", line 40: warning #225-D: function "followDirections" declared implicitly
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 276: error #148: declaration is incompatible with "void reverseDirections(directions *)" (declared at line 32 of "..\helpers.h")
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+1 error detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 37: error #102: "numDirs" has already been declared in the current scope
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 9: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 12: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 13: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 25: error #760: variable "object" is not a type name
+"../movement.c", line 179: error #249: function "followDirections" has already been defined
+"../movement.c", line 181: warning #176-D: expression has no effect
+"../movement.c", line 181: error #66: expected a ";"
+"../movement.c", line 184: error #169: argument of type "directions" is incompatible with parameter of type "int"
+"../movement.c", line 186: error #32: expression must have arithmetic type
+"../movement.c", line 190: error #32: expression must have arithmetic type
+"../movement.c", line 192: error #169: argument of type "directions" is incompatible with parameter of type "int"
+9 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 9: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 12: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 13: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 25: error #760: variable "object" is not a type name
+"../movement.c", line 179: error #249: function "followDirections" has already been defined
+"../movement.c", line 181: warning #176-D: expression has no effect
+"../movement.c", line 181: error #66: expected a ";"
+"../movement.c", line 184: error #169: argument of type "directions" is incompatible with parameter of type "int"
+"../movement.c", line 186: error #32: expression must have arithmetic type
+"../movement.c", line 190: error #32: expression must have arithmetic type
+"../movement.c", line 192: error #169: argument of type "directions" is incompatible with parameter of type "int"
+9 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 19: error #131: expected a "{"
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 9: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 12: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 13: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 25: error #760: variable "object" is not a type name
+"../movement.c", line 179: error #249: function "followDirections" has already been defined
+"../movement.c", line 181: warning #176-D: expression has no effect
+"../movement.c", line 181: error #66: expected a ";"
+"../movement.c", line 184: error #169: argument of type "directions" is incompatible with parameter of type "int"
+"../movement.c", line 186: error #32: expression must have arithmetic type
+"../movement.c", line 190: error #32: expression must have arithmetic type
+"../movement.c", line 192: error #169: argument of type "directions" is incompatible with parameter of type "int"
+9 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+"../movement.c", line 179: error #249: function "followDirections" has already been defined
+"../movement.c", line 181: warning #176-D: expression has no effect
+"../movement.c", line 181: error #66: expected a ";"
+"../movement.c", line 184: error #169: argument of type "directions" is incompatible with parameter of type "int"
+"../movement.c", line 186: error #32: expression must have arithmetic type
+"../movement.c", line 190: error #32: expression must have arithmetic type
+"../movement.c", line 192: error #169: argument of type "directions" is incompatible with parameter of type "int"
+9 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 19: error #131: expected a "{"
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 19: error #131: expected a "{"
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 292: warning #994-D: missing return statement at end of non-void function "reverseDirections"
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 276: error #148: declaration is incompatible with "int reverseDirections(directions *)" (declared at line 31 of "..\helpers.h")
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+13 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 276: error #148: declaration is incompatible with "int reverseDirections(directions *)" (declared at line 31 of "..\helpers.h")
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+13 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+9 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 24: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+3 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\movement.h", line 10: error #11-D: unrecognized preprocessing directive
+"..\movement.h", line 25: error #20: identifier "directions" is undefined
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+10 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\movement.h", line 10: error #11-D: unrecognized preprocessing directive
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"..\movement.h", line 10: error #11-D: unrecognized preprocessing directive
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+13 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"..\movement.h", line 10: error #11-D: unrecognized preprocessing directive
+"..\movement.h", line 25: error #20: identifier "directions" is undefined
+"..\helpers.h", line 7: error #131: expected a "{"
+"..\helpers.h", line 8: warning #179-D: variable "angle" was declared but never referenced
+"..\helpers.h", line 9: warning #179-D: variable "distance" was declared but never referenced
+"..\helpers.h", line 10: warning #179-D: variable "width" was declared but never referenced
+"..\helpers.h", line 11: warning #179-D: variable "linWidth" was declared but never referenced
+"..\helpers.h", line 12: warning #78-D: this declaration has no storage class or type specifier
+"..\helpers.h", line 24: error #760: variable "object" is not a type name
+4 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 11: error #131: expected a "{"
+"../movement.c", line 12: error #20: identifier "sensor" is undefined
+"../movement.c", line 12: warning #121-D: return value type does not match the function type
+"../movement.c", line 13: warning #121-D: return value type does not match the function type
+2 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+8 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project project ****
+
+"C:\\ti\\ccs1230\\ccs\\utils\\bin\\gmake" -k -j 20 all -O 
+ 
+Building file: "../manual_control.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="manual_control.d_raw"  "../manual_control.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'manual_control.obj' failed
+"..\uart.h", line 19: error #131: expected a "{"
+"../manual_control.c", line 26: warning #12-D: parsing restarts here after previous syntax error
+"../manual_control.c", line 27: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 27: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 29: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 30: warning #515-D: a value of type "int" cannot be assigned to an entity of type "char *"
+"../manual_control.c", line 32: warning #121-D: return value type does not match the function type
+"../manual_control.c", line 42: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 43: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 44: error #20: identifier "response" is undefined
+"../manual_control.c", line 46: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 46: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 52: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 53: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 54: error #20: identifier "response" is undefined
+"../manual_control.c", line 56: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 56: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 62: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 63: error #20: identifier "number" is undefined
+"../manual_control.c", line 63: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 64: error #20: identifier "response" is undefined
+"../manual_control.c", line 66: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 66: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 72: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 73: error #20: identifier "number" is undefined
+"../manual_control.c", line 73: warning #225-D: function "receive_number" declared implicitly
+"../manual_control.c", line 74: error #20: identifier "response" is undefined
+"../manual_control.c", line 76: warning #225-D: function "uart_receive_server" declared implicitly
+"../manual_control.c", line 76: warning #145-D: a value of type "int" cannot be used to initialize an entity of type "char *"
+"../manual_control.c", line 85: warning #225-D: function "uart_sendStr" declared implicitly
+"../manual_control.c", line 86: error #20: identifier "command" is undefined
+"../manual_control.c", line 86: warning #225-D: function "uart_receive_server" declared implicitly
+8 errors detected in the compilation of "../manual_control.c".
+gmake: *** [manual_control.obj] Error 1
+Building file: "../movement.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="movement.d_raw"  "../movement.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'movement.obj' failed
+"../movement.c", line 11: error #131: expected a "{"
+"../movement.c", line 12: error #20: identifier "sensor" is undefined
+"../movement.c", line 12: warning #121-D: return value type does not match the function type
+"../movement.c", line 13: warning #121-D: return value type does not match the function type
+2 errors detected in the compilation of "../movement.c".
+gmake: *** [movement.obj] Error 1
+Building file: "../helpers.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="helpers.d_raw"  "../helpers.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'helpers.obj' failed
+"../helpers.c", line 12: error #131: expected a "{"
+"../helpers.c", line 19: warning #12-D: parsing restarts here after previous syntax error
+"../helpers.c", line 34: error #20: identifier "sensor" is undefined
+"../helpers.c", line 46: error #20: identifier "r" is undefined
+"../helpers.c", line 47: error #20: identifier "c" is undefined
+"../helpers.c", line 112: warning #179-D: variable "index" was declared but never referenced
+"../helpers.c", line 144: error #20: identifier "r" is undefined
+"../helpers.c", line 144: error #20: identifier "c" is undefined
+"../helpers.c", line 195: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 215: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 245: warning #179-D: variable "temp" was declared but never referenced
+"../helpers.c", line 263: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 263: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "givenDirs" is undefined
+"../helpers.c", line 270: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 278: error #20: identifier "numDirs" is undefined
+"../helpers.c", line 280: error #20: identifier "givenDirs" is undefined
+12 errors detected in the compilation of "../helpers.c".
+gmake: *** [helpers.obj] Error 1
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="U:/CPRE288/288_final_proj/project" --include_path="C:/ti/TivaWare_C_Series-2.2.0.295" --include_path="C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"..\manual_control.h", line 11: error #131: expected a "{"
+"../main.c", line 18: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 41: warning #225-D: function "drive" declared implicitly
+"../main.c", line 54: warning #121-D: return value type does not match the function type
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

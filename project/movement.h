@@ -7,6 +7,7 @@
 
 #ifndef MOVEMENT_H_
 #define MOVEMENT_H_
+#include "helpers.h"
 
 #include "open_interface.h"
 
@@ -21,4 +22,5 @@ void move_backward(oi_t *sensor, int milimeters);
 void turn_clockwise(oi_t *sensor, int degrees);
 void turn_counter_clockwise(oi_t *sensor, int degrees);
 
+void followDirections(oi_t *oi, directions dirs[], int numDirs)
 #endif /* MOVEMENT_H_ */

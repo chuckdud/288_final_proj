@@ -2,6 +2,7 @@
 
 movement.obj: ../movement.c
 movement.obj: ../movement.h
+movement.obj: ../helpers.h
 movement.obj: ../open_interface.h
 movement.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
 movement.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
@@ -30,6 +31,8 @@ movement.obj: ../lcd.h
 ../movement.c:
 
 ../movement.h:
+
+../helpers.h:
 
 ../open_interface.h:
 

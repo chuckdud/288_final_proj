@@ -20,11 +20,24 @@ int main(void)
     servo_init();
     uart_init(115200);
     oi_t *sensor = oi_alloc();
+    oi_init(sensor);
     ping_init();
     timer_init();
     lcd_init();
     lcd_clear();
+    directions revDirs[15];
+move_forward(sensor, 100);
+turn_counter_clockwise(sensor, 45);
+move_forward(sensor, 100);
+turn_clockwise(sensor,45);
+move_forward(sensor, 100);
+turn_counter_clockwise(sensor, 45);
+move_forward(sensor, 100);
 
+reverseDirections(revDirs);
+
+//turn_counter_clockwise(sensor, 180);
+//followDirections(sensor, revDirs, numDirs);
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
 
     if(uart_receive_blocking() =='c'){

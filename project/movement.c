@@ -6,6 +6,7 @@
 #include "open_interface.h"
 #include "Timer.h"
 #include "lcd.h"
+#include "helpers.h"
 
 int bumped(oi_t *sensor) {
     if (sensor->bumpLeft || sensor->bumpRight) return 1;
@@ -42,6 +43,7 @@ void move_backward(oi_t *sensor, int milimeters){
         sum += sensor->distance;
     }
     oi_setWheels(0, 0); // stop
+    trackDistance((milimeters * -1.0));
 }
 
 void move_forward(oi_t *sensor, int milimeters){
@@ -62,6 +64,7 @@ void move_forward(oi_t *sensor, int milimeters){
 //        oi_init(sensor);
     }
     oi_setWheels(0, 0); // stop
+    trackDistance(milimeters);
 }
 
 void turn_clockwise(oi_t *sensor, int degrees){
@@ -75,6 +78,7 @@ void turn_clockwise(oi_t *sensor, int degrees){
        turned += sensor->angle;
    }
    oi_setWheels(0, 0);
+   trackAngles((degrees*(-1.0)));
 }
 
 void turn_counter_clockwise(oi_t *sensor, int degrees){
@@ -88,6 +92,7 @@ void turn_counter_clockwise(oi_t *sensor, int degrees){
        turned += sensor->angle;
    }
    oi_setWheels(0, 0);
+   trackAngles((degrees*(1.0)));
 }
 
 short boundDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
@@ -122,3 +127,73 @@ void boundAvoid(oi_t *oi){
         return;
     }
 }
+short shinyDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
+    short result = 0;
+    oi_update(oi);
+    if ((oi->cliffLeftSignal >= 2900) || (oi->cliffFrontLeftSignal >= 2900))
+    {
+        result = -1;
+    }
+    else if ((oi->cliffRightSignal >= 2900)|| (oi->cliffFrontRightSignal >= 2900))
+    {
+        result = 1;
+    }
+    else
+    {
+        result = 0;
+    }
+
+    return result;
+}
+short holeDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
+    short result = 0;
+    oi_update(oi);
+    if ((oi->cliffLeftSignal <= 1000) || (oi->cliffFrontLeftSignal <= 1000))
+    {
+        result = -1;
+    }
+    else if ((oi->cliffRightSignal <= 1000)|| (oi->cliffFrontRightSignal <= 1000))
+    {
+        result = 1;
+    }
+    else
+    {
+        result = 0;
+    }
+
+    return result;
+}
+void holeAvoid(oi_t *oi){
+    short hole = holeDetect(oi);
+
+    if (hole == 1){
+        move_backward(oi, 100);
+        turn_counter_clockwise(oi, 90);
+    } else if (hole == -1){
+        move_backward(oi, 100);
+        turn_clockwise(oi, 90);
+    } else {
+        return;
+    }
+}
+//void followDirections(oi_t *oi, directions dirs[], int numDirs){
+//    int i;
+//    for(i = 0; i < numDirs, i++){
+//        if(dirs[i].angle == 0){
+//            if(dirs[i].distance > 0){
+//                move_forward(oi, dirs[i]);
+//            } else{
+//                move_backward(oi, (dirs[i] * -1));
+//            }
+//        }else{
+//            if(dirs[i].angle < 0){
+//                turn_clockwise(oi, (dirs[i] * -1));
+//            }else{
+//                turn_counter_clockwise(oi, dirs[i]);
+//            }
+//
+//        }
+//
+//    }
+//
+//}

@@ -2,6 +2,7 @@
 
 manual_control.obj: ../manual_control.c
 manual_control.obj: ../movement.h
+manual_control.obj: ../helpers.h
 manual_control.obj: ../open_interface.h
 manual_control.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
 manual_control.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
@@ -36,6 +37,8 @@ manual_control.obj: ../manual_control.h
 ../manual_control.c:
 
 ../movement.h:
+
+../helpers.h:
 
 ../open_interface.h:
 

@@ -4,14 +4,17 @@
 #define HELPERS_H_
 #include"open_interface.h"
 
-typedef struct object
-{
+typedef struct object{
     int angle;
     float distance;
     int width;
     double linWidth;
 } object;
 
+typedef struct directions{
+    float angle;
+    float distance;
+}directions;
 
 void reverse(char str[], int length);
 char* itoa(int num, char *str, int base);
@@ -22,4 +25,9 @@ int scnrAnalysis(float vals[], object *results, float IRvals[]);
 
 void scan180(float vals[],float IRvals[]);
 void findRC(oi_t *sensor);
+
+void trackAngles(float angle);
+void trackDistance(float distance);
+void reverseDirections(directions *revDirs);
+
 #endif

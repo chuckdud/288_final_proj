@@ -11,6 +11,10 @@
 
 double r =0;
 double c= 0;
+short numDirs = 0;
+directions givenDirs[60];
+
+
 
 void findRC(oi_t *sensor){
     servo_move(90);
@@ -255,3 +259,34 @@ int scnrAnalysis(float vals[], object *results, float IRvals[])
     return numResult;
 }
 
+void trackAngles(float angle){
+givenDirs[numDirs].distance = 0;
+givenDirs[numDirs].angle = angle;
+numDirs++;
+return;
+}
+
+void trackDistance(float distance){
+givenDirs[numDirs].distance = distance;
+givenDirs[numDirs].angle = 0;
+numDirs++;
+return;
+}
+
+void reverseDirections(directions *revDirs){
+    int i;
+    for(i = numDirs - 1; i >= 0; i--){//iterate backward through given
+                                   //array while going forward through reversed array
+        if(givenDirs[i].distance == 0){ //check to see if it is an angle direction
+              givenDirs[i].angle *= -1;// invert the angle
+              revDirs->angle = givenDirs[i].angle;
+              revDirs->distance = 0;
+        } else {                        //otherwise
+        revDirs->distance = givenDirs[i].distance; //place the distance into the array
+        revDirs->angle = 0;
+        }
+        revDirs++;
+    }
+
+
+}
