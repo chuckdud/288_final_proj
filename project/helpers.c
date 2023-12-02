@@ -142,11 +142,14 @@ void send180(int *pings, float *IRvals) {
 }
 
 void scan180(int pings[], float IRvals[]){
+    servo_move(0);
+    timer_waitMillis(750);
     int angle = 0;
     int i = 0;
     for(angle = 0; angle <= 180; angle += 2){
         servo_move(angle);
         pings[i] = ping_read();
+        if (pings[i] < 0) pings[i] = 100; // garbage negative ping interpreted as no object
         IRvals[i] = convertRawIR(adc_read(),r,c);
         i++;
 

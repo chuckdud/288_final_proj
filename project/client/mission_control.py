@@ -55,8 +55,6 @@ cybot = cybot_socket.makefile("rbw", buffering=0)  # makefile creates a file obj
 
 print("Input 'drive' to control the bot.") # TODO:: change this!
 
-move_cmds = ["w", "a", "s", "d"]
-
 while True:
         cmd = input("Enter Command: ")
         send_message = cmd + '\0' + '\n'   # 2) Have user enter text
@@ -79,9 +77,9 @@ while True:
         print("Waiting for server reply...\n")
         rx_message = cybot.readline()      # Wait for a message, readline expects message to end with "\n" TODO:: does readline actually expect '\n'???
         print("Cybot Response: " + rx_message.decode() + "\n") # Convert message from bytes to String (i.e., decode)
-        if cmd in move_cmds:
-                rx_message = cybot.readline()
-                print("Movement status: " + rx_message.decode() + "\n")
+        # if cmd == "w":
+        #         rx_message = cybot.readline()
+        #         print("Movement status: " + rx_message.decode() + "\n")
         
 print("Client exiting, and closing file descriptor, and/or network socket\n")
 time.sleep(2)
