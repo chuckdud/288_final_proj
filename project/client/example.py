@@ -8,7 +8,11 @@ class MainWindow:
     def __init__(self, master):
         self.master = master
         self.frame = tk.Frame(self.master)
-        self.mc_btn = tk.Button(self.frame, text = 'Manual Control', width = 30, height = 30, command = self.manual_control)
+        self.mc_btn = tk.Button(self.frame,
+								text='Manual Control',
+								width=30,
+								height=30,
+								command=self.manual_control)
         self.mc_btn.pack()
         self.frame.pack()
 
