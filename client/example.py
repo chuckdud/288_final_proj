@@ -8,7 +8,7 @@ class MainWindow:
     def __init__(self, master):
         self.master = master
         self.frame = tk.Frame(self.master)
-        self.mc_btn = tk.Button(self.frame, text = 'Manual Control', width = 100, height = 100, command = self.manual_control)
+        self.mc_btn = tk.Button(self.frame, text = 'Manual Control', width = 30, height = 30, command = self.manual_control)
         self.mc_btn.pack()
         self.frame.pack()
 
@@ -21,7 +21,7 @@ class ManualControl:
     def __init__(self, master):
         self.master = master
         self.frame = tk.Frame(self.master)
-        self.manual_btn = tk.Button(self.frame, text = 'Quit', width = 100, height = 100, command = CyBotComms.manual_cmd)
+        self.manual_btn = tk.Button(self.frame, text = 'Quit', height = 3, width = 50, command = CyBotComms.manual_cmd)
         self.manual_btn.pack()
         self.frame.pack()
 
@@ -46,6 +46,7 @@ def main():
     # print("Input 'drive' to control the bot.") # TODO:: change this!
 
     root = tk.Tk()
+    root.geometry("600x350")
     main = MainWindow(root)
     root.mainloop()
 
