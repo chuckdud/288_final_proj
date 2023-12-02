@@ -46,36 +46,40 @@ cybot = cybot_socket.makefile("rbw", buffering=0)  # makefile creates a file obj
 
 print("Input 'drive' to control the bot.") # TODO:: change this!
 
-while True:
-        cmd = input("Enter Command: ")
-        send_message = cmd + '\0' + '\n'   # 2) Have user enter text
 
-        cybot.write(send_message.encode()) # Convert String to bytes (i.e., encode), and send data to the server
+# this structure likely will not work because using stdout for input and output will cause issues
+def send_commands():
+	while True:
+		cmd = input("Enter Command: ")
+		send_message = cmd + '\0' + '\n'
+		cybot.write(send_message.encode())
 
-        print("Command sent: " + send_message) 
-        if cmd == "quit":
-                break
+
+def receive_commands():
+	while True:
+		rx_message = cybot.readline()      # Wait for a message, readline expects message to end with "\n" TODO:: does readline actually expect '\n'???
+		print("Cybot Response: " + rx_message.decode() + "\n") # Convert message from bytes to String (i.e., decode)
+		if cmd == "quit":
+		break
+
         if cmd == "scan":
-                distances = []
-                ir_dists = []
-                angles = []
-                for i in range(90):
-                        distances.append(int(cybot.readline().decode().strip('\r\n\x00')))
-                        ir_dists.append(float(cybot.readline().decode().strip('\r\n\x00')))
-                        angles.append(i * 2)
-                print(ir_dists)
-				# allow both graphs to display at the same time
-				t1 = threading.Thread(target=graph, args=(distances,angles))
-				t2 = threading.Thread(target=graph, args(ir_dists,angles))
-				t1.start()
-				t2.start()
-				# wait until both graphs are closed to continue
-				t1.join()
-				t2.join()
+			distances = []
+			ir_dists = []
+			angles = []
+			for i in range(90):
+					distances.append(int(cybot.readline().decode().strip('\r\n\x00')))
+					ir_dists.append(float(cybot.readline().decode().strip('\r\n\x00')))
+					angles.append(i * 2)
+			print(ir_dists)
+			# allow both graphs to display at the same time
+			t1 = threading.Thread(target=graph, args=(distances,angles))
+			t2 = threading.Thread(target=graph, args(ir_dists,angles))
+			t1.start()
+			t2.start()
+			# wait until both graphs are closed to continue
+			t1.join()
+			t2.join()
 
-        print("Waiting for server reply...\n")
-        rx_message = cybot.readline()      # Wait for a message, readline expects message to end with "\n" TODO:: does readline actually expect '\n'???
-        print("Cybot Response: " + rx_message.decode() + "\n") # Convert message from bytes to String (i.e., decode)
         
 print("Client exiting, and closing file descriptor, and/or network socket\n")
 time.sleep(2)
