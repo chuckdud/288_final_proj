@@ -97,7 +97,7 @@ void drive(oi_t *sensor)
                 if (strcmp(command, "w") == 0)
                 {
                     user_move_forward(sensor);
-                    uart_sendStr("status message");
+                    uart_receive_server(); // get acknowledgement from client
                 }
                 else if (strcmp(command, "s") == 0)
                 {
@@ -113,8 +113,6 @@ void drive(oi_t *sensor)
                 }
                 else if (strcmp(command, "scan") == 0)
                 {
-                    // TODO::
-                    // scan, gather info on objects
                     int pings[90];
                     float IRvals[90];
                     send180(pings, IRvals);
@@ -132,7 +130,10 @@ void drive(oi_t *sensor)
             uart_sendStr("Entering autonomous mode. Input 'exit' to return to mode selection.");
             while (strcmp(command, "exit") != 0) {
                 if (repeat) uart_sendStr("In autonomous mode. Input 'exit' to return to mode selection.");
-                command = uart_receive_server();
+				directions revDirs[15];
+				reverseDirections(revDirs);
+				followDirections(sensor, revDirs, getNumMoves());
+				command = uart_receive_server();
                 repeat = 1;
             }
         }
@@ -140,8 +141,6 @@ void drive(oi_t *sensor)
             lcd_printf("QUITTING!");
             break;
         }
-        // TODO:: create some kind of message for invalid input.... as it currently stands its easier to just serve same info as first time. maybe thats fine?
-//        else uart_sendStr("Invalid command.");
     }
     oi_free(sensor);
 }

@@ -8,9 +8,12 @@
 #include "movement.h"
 #define _OPEN_SYS_ITOA_EXT
 
+extern int hitSomething;
 
-double r = -1.1327539289;
-double c =  82028.1353831678;
+double r = 0;
+double c = 0;
+short numDirs = 0;
+directions givenDirs[60];
 
 void findRC(oi_t *sensor){
     servo_move(90);
@@ -58,6 +61,7 @@ void reverse(char str[], int length)
         start++;
     }
 }
+
 char* itoa(int num, char *str, int base)
 {
     int i = 0;
@@ -101,37 +105,10 @@ char* itoa(int num, char *str, int base)
     return str;
 }
 
-
-char getSocket(){
-    int index = 0;  // Set index to the beginning of the command buffer
-    char my_data = uart_receive(); // Get first byte of the command from the Client
-    //char command[3];
-    // Get the rest of the command until a newline byte (i.e., '\n') received
-    //        while(my_data != ('\n' || '\x17') )
-    //        {
-    //          command[index] = my_data;  // Place byte into the command buffer
-    //          index++;
-    //          my_data = uart_receive(); // Get the next byte of the command
-    //        }
-
-    //command[index] = '\n';  // place newline into command in case one wants to echo the full command back to the Client
-    //command[index] = 0;   // End command C-string with a NULL byte so that functions like printf know when to stop printing
-
-    //lcd_printf("Got: %s", command);  // Print received command to the LCD screen
-
-    // Send a response to the Client (Starter Client expects the response to end with \n)
-    // In this case I am just sending back the first byte of the command received and a '\n'
-    //uart_sendStr("Command Received\n");
-    // uart_sendChar('\n');
-    // Only send a '\n' if the first byte of the command is not a '\n',
-    // to avoid sending back-to-back '\n' to the client
-    return my_data;
-}
-
 void send180(int *pings, float *IRvals) {
     int i = 0;
     char data[10];
-    sprintf(data, "%d", 1);
+    sprintf(data, "%d", 1); //TODO:: deleteme
     scan180(pings, IRvals);
     for (i = 0; i < 90; i++) {
         sprintf(data, "%d", pings[i]);
@@ -158,7 +135,6 @@ void scan180(int pings[], float IRvals[]){
 
 int scnrAnalysis(float vals[], object *results, float IRvals[])
 {
-
     int numResult = 0;
     int numAdded = 0;
     int i = 0;
@@ -169,7 +145,6 @@ int scnrAnalysis(float vals[], object *results, float IRvals[])
 
     for (i = 0; i < 89; i++)
     {
-
         double slope = (IRvals[i + 1] - IRvals[i]) / 2.0;
 
         if ((IRvals[i + 1] > 75) && onObj == 0) //If something is not close and not on object
@@ -191,7 +166,6 @@ int scnrAnalysis(float vals[], object *results, float IRvals[])
                 angleCount = 2;
                 onObj = 1;
                 adjPnts = 0;
-
             }
         }
         else if ((slope >= 5) && (onObj == 1) && (IRvals[i + 1] > 65)) //End of object
@@ -266,5 +240,40 @@ int scnrAnalysis(float vals[], object *results, float IRvals[])
 
     }
     return numResult;
+}
+
+void trackAngles(float angle) {
+	givenDirs[numDirs].distance = 0;
+	givenDirs[numDirs].angle = angle;
+	numDirs++;
+}
+
+void trackDistance(float distance) {
+	if (hitSomething) {
+		givenDirs[numDirs].distance -= 10;
+	}
+	if (distance > 0) {
+		givenDirs[numDirs].distance = distance;
+		givenDirs[numDirs].angle = 0;
+		numDirs++;
+	}
+}
+
+void reverseDirections(directions *revDirs) {
+	int i;
+	for (i = numDirs; i >= 0; i--) {
+		if (givenDirs[i].distance == 0) {
+			givenDirs[i].angle *= -1;
+			revDirs->angle = givenDirs[i].angle;
+			revDirs->distance = 0;
+		} else {
+			revDirs->distance = givenDirs[i].distance;
+			revDirs->angle = 0;
+		}
+	}
+}
+
+int getNumMoves() {
+	return numDirs;
 }
 
