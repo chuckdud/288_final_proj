@@ -20,6 +20,8 @@
 char *command;
 char response[50];
 int number;
+extern char  xLocation[10];
+extern char  yLocation[10];
 
 /**
  * Receive a numerical command from server for distance or angle. Should be moved elsewhere.
@@ -120,9 +122,16 @@ void drive(oi_t *sensor)
                 else if (strcmp(command, "calibrate") == 0)
                 {
                     findRC(sensor);
+                    // get acknowledgement from
                 }
+                uart_sendStr(xLocation);
+         uart_receive_server();
+         uart_sendStr(yLocation);
+         uart_receive_server();
                 repeat = 1;
             }
+
+
         }
         else if (strcmp(command, "auto") == 0)
         {

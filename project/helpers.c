@@ -10,8 +10,8 @@
 
 extern int hitSomething;
 
-double r = 0;
-double c = 0;
+double r = -1.0367;
+double c = 37865.11;
 short numDirs = 0;
 directions givenDirs[60];
 
@@ -249,9 +249,7 @@ void trackAngles(float angle) {
 }
 
 void trackDistance(float distance) {
-	if (hitSomething) {
-		givenDirs[numDirs].distance -= 10;
-	}
+
 	if (distance > 0) {
 		givenDirs[numDirs].distance = distance;
 		givenDirs[numDirs].angle = 0;

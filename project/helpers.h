@@ -34,8 +34,8 @@ void trackAngles(float angle);
 
 void trackDistance(float distance);
 
-void reverseDirections(directiosn *revDirs);
+void reverseDirections(directions *revDirs);
 
-void getNumMoves();
+int getNumMoves();
 
 #endif

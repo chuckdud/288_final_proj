@@ -8,8 +8,15 @@
 #include "lcd.h"
 #include "helpers.h"
 #include "uart.h"
+#include "math.h"
 
 int hitSomething = 0;
+int x = 61;
+int y = 61;
+int angle = 90;
+
+char xLocation[10];
+char yLocation[10];
 
 int bumped(oi_t *sensor) {
     if (sensor->bumpLeft || sensor->bumpRight) return 1;
@@ -20,17 +27,18 @@ void avoid_obstacle(oi_t *sensor) {
     int left_bump = sensor->bumpLeft;
     int backtrack = 150;
     if (left_bump) {
-		uart_sendStr("Left bump sensor has been hit. Moving backward 10 cm.");
+		uart_sendStr("Left bump sensor has been hit.");
     } else {
-		uart_sendStr("Right bump sensor has been hit. Moving backward 10 cm.");
+		uart_sendStr("Right bump sensor has been hit.");
     }
     move_backward(sensor, backtrack);
 }
 
 short boundDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
     short result = 0;
-    oi_update(oi);
+
     if ((oi->cliffLeftSignal >= 2700) || (oi->cliffFrontLeftSignal >= 2700))
+
     {
         result = -1;
     }
@@ -50,11 +58,14 @@ void boundAvoid(oi_t *oi){
     short bound = boundDetect(oi);
 
     if (bound == 1){
+        uart_sendStr("Right side hit boundary.");
         move_backward(oi, 100);
-        turn_counter_clockwise(oi, 90);
+
+       // turn_counter_clockwise(oi, 90);
     } else if (bound == -1){
+        uart_sendStr("Left side hit boundary..");
         move_backward(oi, 100);
-        turn_clockwise(oi, 90);
+       // turn_clockwise(oi, 90);
     } else {
         return;
     }
@@ -62,14 +73,10 @@ void boundAvoid(oi_t *oi){
 
 short shinyDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
     short result = 0;
-    oi_update(oi);
-    if ((oi->cliffLeftSignal >= 2900) || (oi->cliffFrontLeftSignal >= 2900) || (oi->cliffRightSignal >= 2900)|| (oi->cliffFrontRightSignal >= 2900))
+
+    if ((oi->cliffLeftSignal >= 2800) || (oi->cliffFrontLeftSignal >= 2800) || (oi->cliffRightSignal >= 2800)|| (oi->cliffFrontRightSignal >= 2800))
     {
         result = 1;
-    }
-    else
-    {
-        result = 0;
     }
 
     return result;
@@ -77,7 +84,7 @@ short shinyDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
 
 short holeDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
     short result = 0;
-//    oi_update(oi);
+
     if ((oi->cliffLeftSignal <= 1000) || (oi->cliffFrontLeftSignal <= 1000))
     {
         result = -1;
@@ -98,10 +105,10 @@ void holeAvoid(oi_t *oi){
     short hole = holeDetect(oi);
 
     if (hole == 1){
-        uart_sendStr("Right cliff sensor has found a hole. Moving backward 10 cm. ");
+        uart_sendStr("Right cliff sensor has found a hole. ");
         move_backward(oi, 100);
     } else if (hole == -1){
-        uart_sendStr("Left cliff sensor has found a hole. Moving backward 10 cm. ");
+        uart_sendStr("Left cliff sensor has found a hole.");
         move_backward(oi, 100);
     }
 }
@@ -119,6 +126,7 @@ void move_backward(oi_t *sensor, int milimeters){
     }
     oi_setWheels(0, 0); // stop
 	// trackDistance((milimeters * -1.0)); // TODO:: why is this commented out?
+    calcNewXY(sum);
 }
 
 void move_forward(oi_t *sensor, int milimeters){
@@ -126,6 +134,7 @@ void move_forward(oi_t *sensor, int milimeters){
     oi_init(sensor);
 	hitSomething = 0;
 	int hitDistance = 0;
+	int distBeforeHit = 0;
     double sum = 0;
     int forward_speed = 100;
     oi_setWheels(forward_speed, forward_speed);
@@ -137,44 +146,62 @@ void move_forward(oi_t *sensor, int milimeters){
 			// break out to function
 			// also - should move printing into this method, rather than in each xAvoid() func
 			hitSomething = 1;
-			hitDistance = sensor->distance;
+            distBeforeHit = sensor->distance;
             oi_setWheels(0, 0);
+            char dist[10];
+            sprintf(dist,"%d",distBeforeHit);
+            uart_sendStr(dist);
             avoid_obstacle(sensor);
+            hitDistance = sensor->distance+distBeforeHit;
 			break;
         }
-		if (bound_detect(sensor)) {
+        if (shinyDetect(sensor)) {
+                    hitSomething = 2;
+                    hitDistance = sensor->distance;
+                    oi_setWheels(0,0);
+                    uart_sendStr("Reached Destination!");
+        }
+		if (boundDetect(sensor)) {
 			hitSomething = 1;
-			hitDistance = sensor->distance;
 			boundAvoid(sensor);
+			hitDistance = sensor->distance;
 			break;
 		}
 		if (holeDetect(sensor)) {
 			hitSomething = 1;
-			hitDistance = sensor->distance;
 			holeAvoid(sensor);
+            hitDistance = sensor->distance;
 			break;
 		}
-		if (shinyDetect(sensor)) {
-			hitSomething = 2;
-			hitDistance = sensor->distance;
-			oi_setWheels(0,0);
-			uart_sendStr("Reached Destination!");
-		}
+
         sum += sensor->distance;
     }
     oi_setWheels(0, 0); // stop
 	// TODO:: are we accounting for -10cm backup on object bump?
-	if (hitSomething) {
+	if (hitSomething == 1) {
+	    calcNewXY(hitDistance);
 		trackDistance(hitDistance);
 	} else {
+	    calcNewXY(sum);
 		trackDistance(sum);
 		uart_sendStr("didn't hit any objects");
 	}
+
 }
 
 // TODO:: these two turn funcs are completely duplicates except for multiplying by -1
 // 			good spot to refactor
+
+void calcNewXY(int distance){
+   x += distance/10*cos(angle*M_PI/180);
+   y += distance/10*sin(angle*M_PI/180);
+   sprintf(xLocation,"X: %d",x);
+   sprintf(yLocation,"Y: %d",y);
+}
+
+
 void turn_clockwise(oi_t *sensor, int degrees){
+   angle-=degrees;
    if (degrees < 0) return;
    oi_init(sensor);
    double turned = 0;
@@ -190,6 +217,7 @@ void turn_clockwise(oi_t *sensor, int degrees){
 }
 
 void turn_counter_clockwise(oi_t *sensor, int degrees){
+    angle+=degrees;
    if (degrees < 0) return;
    oi_init(sensor);
    double turned = 0;
@@ -203,14 +231,14 @@ void turn_counter_clockwise(oi_t *sensor, int degrees){
    trackAngles((degrees*(1.0)));
 }
 
-void folowDirections(oi_t *oi, directions dirs[], int numDirs) {
+void followDirections(oi_t *oi, directions dirs[], int numDirs) {
 	int i;
 	turn_counter_clockwise(oi,180);
 	for (i = 0; i < numDirs; i++) {
 		if (dirs[i].angle == 0 && dirs[i].distance > 0) {
 			move_forward(oi, dirs[i].distance);
 		} else {
-			if (dirs[i.angle] < 0) {
+			if (dirs[i].angle < 0) {
 				turn_clockwise(oi, dirs[i].angle * -1);
 			} else {
 				turn_counter_clockwise(oi, dirs[i].angle);

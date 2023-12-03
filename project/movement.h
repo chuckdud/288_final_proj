@@ -9,6 +9,7 @@
 #define MOVEMENT_H_
 
 #include "open_interface.h"
+#include "helpers.h"
 
 int bumped(oi_t *sensor);
 
@@ -18,9 +19,9 @@ short boundDetect(oi_t *oi);
 
 void boundAvoid(oi_t *oi);
 
-void shinyDetect(oi_t *oi);
+short shinyDetect(oi_t *oi);
 
-void holeDetect(oi_t *oi);
+short holeDetect(oi_t *oi);
 
 void holeAvoid(oi_t *oi);
 
@@ -33,5 +34,7 @@ void turn_clockwise(oi_t *sensor, int degrees);
 void turn_counter_clockwise(oi_t *sensor, int degrees);
 
 void followDirections(oi_t *oi, directions dirs[], int numDirs);
+
+void calcNewXY(int distance);
 
 #endif /* MOVEMENT_H_ */

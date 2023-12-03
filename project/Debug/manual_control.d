@@ -26,13 +26,13 @@ manual_control.obj: C:/ti/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h
 manual_control.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 manual_control.obj: C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
 manual_control.obj: ../lcd.h
+manual_control.obj: ../helpers.h
 manual_control.obj: ../uart.h
 manual_control.obj: ../ping.h
 manual_control.obj: ../servo.h
 manual_control.obj: ../adc.h
 manual_control.obj: C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 manual_control.obj: ../manual_control.h
-manual_control.obj: ../helpers.h
 
 ../manual_control.c:
 
@@ -86,6 +86,8 @@ C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 
 ../lcd.h:
 
+../helpers.h:
+
 ../uart.h:
 
 ../ping.h:
@@ -97,6 +99,4 @@ C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
 C:/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 
 ../manual_control.h:
-
-../helpers.h:
 

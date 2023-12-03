@@ -26,6 +26,13 @@ int main(void)
     lcd_clear();
 
     servo_move(0);
+//    while(1){
+//        oi_update(sensor);
+//        char data[10];
+//        sprintf(data, "%d", sensor->cliffLeftSignal);
+//        lcd_printf(data);
+//    }
+
 
 	// TODO:: get rid of this step, just go into manual mode
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
