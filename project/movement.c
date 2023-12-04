@@ -18,6 +18,12 @@ int angle = 90;
 char xLocation[10];
 char yLocation[10];
 
+void update_location(int new_x, int new_y, int new_angle) {
+    x = new_x;
+    y = new_y;
+    angle = new_angle;
+}
+
 int bumped(oi_t *sensor) {
     if (sensor->bumpLeft || sensor->bumpRight) return 1;
     return 0;
@@ -150,19 +156,24 @@ void move_forward(oi_t *sensor, int milimeters){
             //hitDistance = sum;
 			break;
         }
-        if (shinyDetect(sensor)) {
-                    hitSomething = 1;
-                    //hitDistance = sensor->distance;
-                    oi_setWheels(0,0);
-                    uart_sendStr("Reached Destination!");
+        else if (shinyDetect(sensor)) {
+            hitSomething = 1;
+            //hitDistance = sensor->distance;
+            oi_setWheels(0,0);
+            uart_sendStr("Reached Destination!");
+            unsigned char song[14] = {69,76,74,76,69,77,76,77,76,74,77,76,77,69};
+            unsigned char duration[14] = {16,8,8,32,112,8,8,16,16,112,8,8,32,32};
+            oi_loadSong(0, 14, song, duration);
+            oi_play_song(0);
+            break;
         }
-		if (boundDetect(sensor)) {
+        else if (boundDetect(sensor)) {
 			hitSomething = 1;
 			boundAvoid(sensor);
 			//hitDistance = sum;
 			break;
 		}
-		if (holeDetect(sensor)) {
+        else if (holeDetect(sensor)) {
 			hitSomething = 1;
 			holeAvoid(sensor);
             //hitDistance = sum;
@@ -184,16 +195,12 @@ void move_forward(oi_t *sensor, int milimeters){
 
 }
 
-// TODO:: these two turn funcs are completely duplicates except for multiplying by -1
-// 			good spot to refactor
-
 void calcNewXY(int distance){
    x += distance/10*cos(angle*M_PI/180);
    y += distance/10*sin(angle*M_PI/180);
    sprintf(xLocation,"X: %d",x);
    sprintf(yLocation,"Y: %d",y);
 }
-
 
 void turn_clockwise(oi_t *sensor, int degrees){
    angle-=degrees;
@@ -227,6 +234,7 @@ void turn_counter_clockwise(oi_t *sensor, int degrees){
 }
 
 void followDirections(oi_t *oi, directions dirs[], int numDirs) {
+    lcd_printf("numDirs: %d", numDirs);
 	int i;
 	turn_counter_clockwise(oi,180);
 	for (i = 0; i < numDirs; i++) {

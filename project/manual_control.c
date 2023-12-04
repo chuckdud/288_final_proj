@@ -17,6 +17,7 @@
 #include "manual_control.h"
 #include "helpers.h"
 
+
 char *command;
 char response[50];
 int number;
@@ -33,6 +34,16 @@ int receive_number() {
         cmd = uart_receive_server();
     }
     return atoi(cmd);
+}
+
+void set_location() {
+    uart_sendStr("Please enter bot's starting x coordinate.");
+    int x = receive_number();
+    uart_sendStr("Please enter bot's starting y coordinate.");
+    int y = receive_number();
+    uart_sendStr("Please enter bot's starting angle.");
+    int angle = receive_number();
+    update_location(x, y, angle);
 }
 
 /**
@@ -123,11 +134,16 @@ void drive(oi_t *sensor)
                 {
                     findRC(sensor);
                     // get acknowledgement from
+                    uart_receive_server();
                 }
+//                else if (strcmp(command, "set start") == 0)
+//                {
+//                    set_location();
+//                }
                 uart_sendStr(xLocation);
-         uart_receive_server();
-         uart_sendStr(yLocation);
-         uart_receive_server();
+                uart_receive_server();
+                uart_sendStr(yLocation);
+                uart_receive_server();
                 repeat = 1;
             }
 
@@ -139,7 +155,7 @@ void drive(oi_t *sensor)
             uart_sendStr("Entering autonomous mode. Input 'exit' to return to mode selection.");
             while (strcmp(command, "exit") != 0) {
                 if (repeat) uart_sendStr("In autonomous mode. Input 'exit' to return to mode selection.");
-				directions revDirs[15];
+				directions revDirs[60];
 				reverseDirections(revDirs);
 				followDirections(sensor, revDirs, getNumMoves());
 				command = uart_receive_server();

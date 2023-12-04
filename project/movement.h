@@ -11,6 +11,8 @@
 #include "open_interface.h"
 #include "helpers.h"
 
+void update_location(int new_x, int new_y, int new_angle);
+
 int bumped(oi_t *sensor);
 
 void avoid_obstacle(oi_t *sensor);

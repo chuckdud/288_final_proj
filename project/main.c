@@ -37,6 +37,10 @@ int main(void)
 	// TODO:: get rid of this step, just go into manual mode
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
 
+//    findRC(sensor);
+
+
+
     oi_free(sensor);
     return 0;
 }

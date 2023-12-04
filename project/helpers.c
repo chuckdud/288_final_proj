@@ -10,8 +10,8 @@
 
 extern int hitSomething;
 
-double r = -1.0367;
-double c = 37865.11;
+double r = -0.5421420953;
+double c = 1565.11855;
 short numDirs = 0;
 directions givenDirs[60];
 
@@ -261,13 +261,14 @@ void reverseDirections(directions *revDirs) {
 	int i;
 	for (i = numDirs; i >= 0; i--) {
 		if (givenDirs[i].distance == 0) {
-			givenDirs[i].angle *= -1;
-			revDirs->angle = givenDirs[i].angle;
+//			givenDirs[i].angle *= -1;
+			revDirs->angle = givenDirs[i].angle * -1;
 			revDirs->distance = 0;
 		} else {
 			revDirs->distance = givenDirs[i].distance;
 			revDirs->angle = 0;
 		}
+		revDirs++;
 	}
 }
 
