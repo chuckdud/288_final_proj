@@ -25,7 +25,7 @@ int bumped(oi_t *sensor) {
 
 void avoid_obstacle(oi_t *sensor) {
     int left_bump = sensor->bumpLeft;
-    int backtrack = 150;
+    int backtrack = 100;
     if (left_bump) {
 		uart_sendStr("Left bump sensor has been hit.");
     } else {
@@ -133,8 +133,7 @@ void move_forward(oi_t *sensor, int milimeters){
     if (milimeters < 0) return;
     oi_init(sensor);
 	hitSomething = 0;
-	int hitDistance = 0;
-	int distBeforeHit = 0;
+	//int hitDistance = 0;
     double sum = 0;
     int forward_speed = 100;
     oi_setWheels(forward_speed, forward_speed);
@@ -146,31 +145,27 @@ void move_forward(oi_t *sensor, int milimeters){
 			// break out to function
 			// also - should move printing into this method, rather than in each xAvoid() func
 			hitSomething = 1;
-            distBeforeHit = sensor->distance;
             oi_setWheels(0, 0);
-            char dist[10];
-            sprintf(dist,"%d",distBeforeHit);
-            uart_sendStr(dist);
             avoid_obstacle(sensor);
-            hitDistance = sensor->distance+distBeforeHit;
+            //hitDistance = sum;
 			break;
         }
         if (shinyDetect(sensor)) {
-                    hitSomething = 2;
-                    hitDistance = sensor->distance;
+                    hitSomething = 1;
+                    //hitDistance = sensor->distance;
                     oi_setWheels(0,0);
                     uart_sendStr("Reached Destination!");
         }
 		if (boundDetect(sensor)) {
 			hitSomething = 1;
 			boundAvoid(sensor);
-			hitDistance = sensor->distance;
+			//hitDistance = sum;
 			break;
 		}
 		if (holeDetect(sensor)) {
 			hitSomething = 1;
 			holeAvoid(sensor);
-            hitDistance = sensor->distance;
+            //hitDistance = sum;
 			break;
 		}
 
@@ -179,8 +174,8 @@ void move_forward(oi_t *sensor, int milimeters){
     oi_setWheels(0, 0); // stop
 	// TODO:: are we accounting for -10cm backup on object bump?
 	if (hitSomething == 1) {
-	    calcNewXY(hitDistance);
-		trackDistance(hitDistance);
+	    calcNewXY(sum);
+		trackDistance(sum);
 	} else {
 	    calcNewXY(sum);
 		trackDistance(sum);
