@@ -10,19 +10,13 @@
 #include "uart.h"
 #include "math.h"
 
-int hitSomething = 0;
+// starting position of Cybot
 int x = 61;
 int y = 61;
 int angle = 90;
 
 char xLocation[10];
 char yLocation[10];
-
-void update_location(int new_x, int new_y, int new_angle) {
-    x = new_x;
-    y = new_y;
-    angle = new_angle;
-}
 
 int bumped(oi_t *sensor) {
     if (sensor->bumpLeft || sensor->bumpRight) return 1;
@@ -33,28 +27,26 @@ void avoid_obstacle(oi_t *sensor) {
     int left_bump = sensor->bumpLeft;
     int backtrack = 100;
     if (left_bump) {
-		uart_sendStr("Left bump sensor has been hit.");
+        uart_sendStr("Left bump sensor has been hit.");
     } else {
-		uart_sendStr("Right bump sensor has been hit.");
+        uart_sendStr("Right bump sensor has been hit.");
     }
     move_backward(sensor, backtrack);
 }
 
-short boundDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
+/**
+ *  0 == no edge,
+ *  -1 == left edge,
+ *  1 == right edge
+ */
+short boundDetect(oi_t *oi){
     short result = 0;
 
-    if ((oi->cliffLeftSignal >= 2700) || (oi->cliffFrontLeftSignal >= 2700))
-
-    {
+    if ((oi->cliffLeftSignal >= 2700) || (oi->cliffFrontLeftSignal >= 2700)) {
         result = -1;
     }
-    else if ((oi->cliffRightSignal >= 2700)|| (oi->cliffFrontRightSignal >= 2700))
-    {
+    else if ((oi->cliffRightSignal >= 2700)|| (oi->cliffFrontRightSignal >= 2700)) {
         result = 1;
-    }
-    else
-    {
-        result = 0;
     }
 
     return result;
@@ -67,41 +59,25 @@ void boundAvoid(oi_t *oi){
         uart_sendStr("Right side hit boundary.");
         move_backward(oi, 100);
 
-       // turn_counter_clockwise(oi, 90);
     } else if (bound == -1){
         uart_sendStr("Left side hit boundary..");
         move_backward(oi, 100);
-       // turn_clockwise(oi, 90);
-    } else {
-        return;
     }
 }
 
-short shinyDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
+/**
+ *  0 == no edge,
+ *  -1 == left edge,
+ *  1 == right edge
+ */
+short holeDetect(oi_t *oi){
     short result = 0;
 
-    if ((oi->cliffLeftSignal >= 2800) || (oi->cliffFrontLeftSignal >= 2800) || (oi->cliffRightSignal >= 2800)|| (oi->cliffFrontRightSignal >= 2800))
-    {
-        result = 1;
-    }
-
-    return result;
-}
-
-short holeDetect(oi_t *oi){ //0 == no edge, -1 == left edge, 1 == right edge
-    short result = 0;
-
-    if ((oi->cliffLeftSignal <= 1000) || (oi->cliffFrontLeftSignal <= 1000))
-    {
+    if ((oi->cliffLeftSignal <= 1000) || (oi->cliffFrontLeftSignal <= 1000)) {
         result = -1;
     }
-    else if ((oi->cliffRightSignal <= 1000)|| (oi->cliffFrontRightSignal <= 1000))
-    {
+    else if ((oi->cliffRightSignal <= 1000)|| (oi->cliffFrontRightSignal <= 1000)) {
         result = 1;
-    }
-    else
-    {
-        result = 0;
     }
 
     return result;
@@ -118,9 +94,22 @@ void holeAvoid(oi_t *oi){
         move_backward(oi, 100);
     }
 }
+/**
+ *  0 == no edge,
+ *  -1 == left edge,
+ *  1 == right edge
+ */
+short shinyDetect(oi_t *oi){
+    short result = 0;
 
+    if ((oi->cliffLeftSignal >= 2800) || (oi->cliffFrontLeftSignal >= 2800) || (oi->cliffRightSignal >= 2800)|| (oi->cliffFrontRightSignal >= 2800)) {
+        result = 1;
+    }
 
-void move_backward(oi_t *sensor, int milimeters){
+    return result;
+}
+
+void move_backward(oi_t *sensor, int milimeters) {
     if (milimeters < 0) return;
     oi_init(sensor);
     double sum = 0;
@@ -130,126 +119,118 @@ void move_backward(oi_t *sensor, int milimeters){
         oi_update(sensor);
         sum += sensor->distance;
     }
-    oi_setWheels(0, 0); // stop
-	// trackDistance((milimeters * -1.0)); // TODO:: why is this commented out?
+    oi_setWheels(0, 0);
     calcNewXY(sum);
 }
 
-void move_forward(oi_t *sensor, int milimeters){
+void move_forward(oi_t *sensor, int milimeters) {
     if (milimeters < 0) return;
     oi_init(sensor);
-	hitSomething = 0;
-	//int hitDistance = 0;
+    char hitSomething = 0;
     double sum = 0;
     int forward_speed = 100;
     oi_setWheels(forward_speed, forward_speed);
     while (sum < milimeters) {
         oi_update(sensor);
-		// TODO:: refactor to remove duplication
         if (bumped(sensor)) {
-			// these three lines are common to every obj detection
-			// break out to function
-			// also - should move printing into this method, rather than in each xAvoid() func
-			hitSomething = 1;
+            hitSomething = 1;
             oi_setWheels(0, 0);
             avoid_obstacle(sensor);
-            //hitDistance = sum;
-			break;
+            break;
         }
         else if (shinyDetect(sensor)) {
-            hitSomething = 1;
-            //hitDistance = sensor->distance;
+            hitSomething = 2;
             oi_setWheels(0,0);
             uart_sendStr("Reached Destination!");
-            unsigned char song[14] = {69,76,74,76,69,77,76,77,76,74,77,76,77,69};
-            unsigned char duration[14] = {16,8,8,32,112,8,8,16,16,112,8,8,32,32};
-            oi_loadSong(0, 14, song, duration);
-            oi_play_song(0);
+            victory_screech();
             break;
         }
         else if (boundDetect(sensor)) {
-			hitSomething = 1;
-			boundAvoid(sensor);
-			//hitDistance = sum;
-			break;
-		}
+            hitSomething = 1;
+            boundAvoid(sensor);
+            break;
+        }
         else if (holeDetect(sensor)) {
-			hitSomething = 1;
-			holeAvoid(sensor);
-            //hitDistance = sum;
-			break;
-		}
+            hitSomething = 1;
+            holeAvoid(sensor);
+            break;
+        }
 
         sum += sensor->distance;
     }
-    oi_setWheels(0, 0); // stop
-	// TODO:: are we accounting for -10cm backup on object bump?
-	if (hitSomething == 1) {
-	    calcNewXY(sum);
-		trackDistance(sum);
-	} else {
-	    calcNewXY(sum);
-		trackDistance(sum);
-		uart_sendStr("didn't hit any objects");
-	}
-
-}
-
-void calcNewXY(int distance){
-   x += distance/10*cos(angle*M_PI/180);
-   y += distance/10*sin(angle*M_PI/180);
-   sprintf(xLocation,"X: %d",x);
-   sprintf(yLocation,"Y: %d",y);
+    oi_setWheels(0, 0);
+    // update current position
+    calcNewXY(sum);
+    trackDistance(sum);
+    // Send response if no collision
+    if (hitSomething == 0) {
+        uart_sendStr("Didn't hit any objects");
+    }
 }
 
 void turn_clockwise(oi_t *sensor, int degrees){
-   angle-=degrees;
-   if (degrees < 0) return;
-   oi_init(sensor);
-   double turned = 0;
-   oi_setWheels(-40, 40);
+    angle-=degrees;
+    if (degrees < 0) return;
+    oi_init(sensor);
+    double turned = 0;
+    oi_setWheels(-40, 40);
 
-   while(degrees-4 > (-1 * turned)){
-       oi_update(sensor);
-       turned += sensor->angle;
-   }
-   oi_setWheels(0, 0);
+    while(degrees-4 > (-1 * turned)){
+        oi_update(sensor);
+        turned += sensor->angle;
+    }
+    oi_setWheels(0, 0);
 
-   trackAngles((degrees*(-1.0)));
+    trackAngles((degrees*(-1.0)));
 }
 
 void turn_counter_clockwise(oi_t *sensor, int degrees){
     angle+=degrees;
-   if (degrees < 0) return;
-   oi_init(sensor);
-   double turned = 0;
-   oi_setWheels(40, -40);
+    if (degrees < 0) return;
+    oi_init(sensor);
+    double turned = 0;
+    oi_setWheels(40, -40);
 
-   while(turned < degrees-4){
-       oi_update(sensor);
-       turned += sensor->angle;
-   }
-   oi_setWheels(0, 0);
-   trackAngles((degrees*(1.0)));
+    while(turned < degrees-4){
+        oi_update(sensor);
+        turned += sensor->angle;
+    }
+    oi_setWheels(0, 0);
+    trackAngles((degrees*(1.0)));
+}
+
+
+void calcNewXY(int distance){
+    x += distance/10*cos(angle*M_PI/180);
+    y += distance/10*sin(angle*M_PI/180);
+    sprintf(xLocation,"X: %d",x);
+    sprintf(yLocation,"Y: %d",y);
+}
+
+void victory_screech() {
+    unsigned char song[14] = {69,76,74,76,69,77,76,77,76,74,77,76,77,69};
+    unsigned char duration[14] = {16,8,8,32,112,8,8,16,16,112,8,8,32,32};
+    oi_loadSong(0, 14, song, duration);
+    oi_play_song(0);
 }
 
 void followDirections(oi_t *oi, directions dirs[], int numDirs) {
     lcd_printf("numDirs: %d", numDirs);
-	int i;
-	turn_counter_clockwise(oi,180);
-	for (i = 0; i < numDirs; i++) {
-		if (dirs[i].angle == 0 && dirs[i].distance > 0) {
-			move_forward(oi, dirs[i].distance);
-		} else {
-			if (dirs[i].angle < 0) {
-				turn_clockwise(oi, dirs[i].angle * -1);
-			} else {
-				turn_counter_clockwise(oi, dirs[i].angle);
-			}
-		}
-	}
-	uart_sendStr("Mission Complete!");
-	unsigned char song[14] = {69,76,74,76,69,77,76,77,76,74,77,76,77,69};
+    int i;
+    turn_counter_clockwise(oi,180);
+    for (i = 0; i < numDirs; i++) {
+        if (dirs[i].angle == 0 && dirs[i].distance > 0) {
+            move_forward(oi, dirs[i].distance);
+        } else {
+            if (dirs[i].angle < 0) {
+                turn_clockwise(oi, dirs[i].angle * -1);
+            } else {
+                turn_counter_clockwise(oi, dirs[i].angle);
+            }
+        }
+    }
+    uart_sendStr("Mission Complete!");
+    unsigned char song[14] = {69,76,74,76,69,77,76,77,76,74,77,76,77,69};
     unsigned char duration[14] = {16,8,8,32,112,8,8,16,16,112,8,8,32,32};
     oi_loadSong(0, 14, song, duration);
     oi_play_song(0);

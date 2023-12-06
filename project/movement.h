@@ -37,6 +37,8 @@ void turn_counter_clockwise(oi_t *sensor, int degrees);
 
 void followDirections(oi_t *oi, directions dirs[], int numDirs);
 
+void victory_screech();
+
 void calcNewXY(int distance);
 
 #endif /* MOVEMENT_H_ */

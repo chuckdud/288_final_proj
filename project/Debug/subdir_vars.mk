@@ -9,7 +9,6 @@ CMD_SRCS += \
 ../tm4c123gh6pm.cmd 
 
 C_SRCS += \
-../MissionTrue.c \
 ../Timer.c \
 ../adc.c \
 ../helpers.c \
@@ -24,7 +23,6 @@ C_SRCS += \
 ../uart.c 
 
 C_DEPS += \
-./MissionTrue.d \
 ./Timer.d \
 ./adc.d \
 ./helpers.d \
@@ -39,7 +37,6 @@ C_DEPS += \
 ./uart.d 
 
 OBJS += \
-./MissionTrue.obj \
 ./Timer.obj \
 ./adc.obj \
 ./helpers.obj \
@@ -54,7 +51,6 @@ OBJS += \
 ./uart.obj 
 
 OBJS__QUOTED += \
-"MissionTrue.obj" \
 "Timer.obj" \
 "adc.obj" \
 "helpers.obj" \
@@ -69,7 +65,6 @@ OBJS__QUOTED += \
 "uart.obj" 
 
 C_DEPS__QUOTED += \
-"MissionTrue.d" \
 "Timer.d" \
 "adc.d" \
 "helpers.d" \
@@ -84,7 +79,6 @@ C_DEPS__QUOTED += \
 "uart.d" 
 
 C_SRCS__QUOTED += \
-"../MissionTrue.c" \
 "../Timer.c" \
 "../adc.c" \
 "../helpers.c" \

@@ -36,22 +36,6 @@ int receive_number() {
     return atoi(cmd);
 }
 
-void set_location() {
-    uart_sendStr("Please enter bot's starting x coordinate.");
-    int x = receive_number();
-    uart_sendStr("Please enter bot's starting y coordinate.");
-    int y = receive_number();
-    uart_sendStr("Please enter bot's starting angle.");
-    int angle = receive_number();
-    update_location(x, y, angle);
-}
-
-/**
- * TODO::
- * Refactor these methods (DRY) but I am not going to put effort into it yet.
- *
- * Also might move them to new file...?
- */
 void user_turn_counterclockwise(oi_t *sensor) {
     uart_sendStr("Turning counterclockwise. Please enter angle (degrees).");
     int number = receive_number();
@@ -101,16 +85,26 @@ void drive(oi_t *sensor)
         if (strcmp(command, "manual") == 0)
         {
             char repeat = 0;
-            uart_sendStr("Entering manual mode. Please input direction for manual control (w, a, s, d). Input 'exit' to return to mode selection.");
+            uart_sendStr("Entering manual mode. Input direction for manual control (w, a, s, d). "
+                    "Input 'scan' to detect objects. "
+                    "Input 'calibrate' to calibrate IR. "
+                    "Input 'exit' to return to mode selection.");
             while (strcmp(command, "exit") != 0)
             {
                 // don't print this message the first time
-                if (repeat) uart_sendStr("In Manual Mode. Please input direction for manual control (w, a, s, d). Input 'exit' to return to mode selection.");
+                if (repeat) uart_sendStr("In Manual Mode. Input direction for manual control (w, a, s, d)."
+                        "Input 'scan' to detect objects. "
+                        "Input 'calibrate' to calibrate IR."
+                        "Input 'exit' to return to mode selection.");
                 command = uart_receive_server();
                 if (strcmp(command, "w") == 0)
                 {
                     user_move_forward(sensor);
-                    uart_receive_server(); // get acknowledgement from client
+                    uart_receive_server();
+                    uart_sendStr(xLocation);
+                    uart_receive_server();
+                    uart_sendStr(yLocation);
+                    uart_receive_server();
                 }
                 else if (strcmp(command, "s") == 0)
                 {
@@ -133,17 +127,9 @@ void drive(oi_t *sensor)
                 else if (strcmp(command, "calibrate") == 0)
                 {
                     findRC(sensor);
-                    // get acknowledgement from
+                    uart_sendStr("Calibrating!");
                     uart_receive_server();
                 }
-//                else if (strcmp(command, "set start") == 0)
-//                {
-//                    set_location();
-//                }
-                uart_sendStr(xLocation);
-                uart_receive_server();
-                uart_sendStr(yLocation);
-                uart_receive_server();
                 repeat = 1;
             }
 
@@ -155,10 +141,10 @@ void drive(oi_t *sensor)
             uart_sendStr("Entering autonomous mode. Input 'exit' to return to mode selection.");
             while (strcmp(command, "exit") != 0) {
                 if (repeat) uart_sendStr("In autonomous mode. Input 'exit' to return to mode selection.");
-				directions revDirs[60];
-				reverseDirections(revDirs);
-				followDirections(sensor, revDirs, getNumMoves());
-				command = uart_receive_server();
+                directions revDirs[60];
+                reverseDirections(revDirs);
+                followDirections(sensor, revDirs, getNumMoves());
+                command = uart_receive_server();
                 repeat = 1;
             }
         }
