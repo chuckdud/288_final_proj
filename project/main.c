@@ -13,30 +13,34 @@
 volatile  char uart_data;
 volatile  char flag;
 
-
 int main(void)
 {
     adc_init();
     servo_init();
     uart_init(115200);
     oi_t *sensor = oi_alloc();
+	oi_init(sensor);
     ping_init();
     timer_init();
     lcd_init();
     lcd_clear();
 
+    servo_move(0);
+//    while(1){
+//        oi_update(sensor);
+//        char data[10];
+//        sprintf(data, "%d", sensor->cliffLeftSignal);
+//        lcd_printf(data);
+//    }
+
+
+	// TODO:: get rid of this step, just go into manual mode
     if (strcmp(uart_receive_server(), "drive") == 0) drive(sensor);
 
-    if(uart_receive_blocking() =='c'){
-        findRC(sensor);
-    }
-    float vals[90];
-    float IRvals[90];
-    object results[5];
+//    findRC(sensor);
 
-    // findRC()
-    scan180(vals,IRvals);
-    scnrAnalysis(vals, results,IRvals);
+
+
     oi_free(sensor);
     return 0;
 }

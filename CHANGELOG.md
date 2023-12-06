@@ -1,6 +1,15 @@
 # CHANGELOG
 
 Add a brief description of your contributions to the top of this doc to let everyone know what you've been up to!
+
+___
+### 11/29 - Charlie
+
+Improved server communication
+
+Create graphs based on ping and IR data
+
+Allow manual calibration on the fly
 ___
 ### 11/28 - Charlie
 

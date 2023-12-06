@@ -15,10 +15,14 @@
 #include "stdlib.h"
 #include "Timer.h"
 #include "manual_control.h"
+#include "helpers.h"
+
 
 char *command;
 char response[50];
 int number;
+extern char  xLocation[10];
+extern char  yLocation[10];
 
 /**
  * Receive a numerical command from server for distance or angle. Should be moved elsewhere.
@@ -30,6 +34,16 @@ int receive_number() {
         cmd = uart_receive_server();
     }
     return atoi(cmd);
+}
+
+void set_location() {
+    uart_sendStr("Please enter bot's starting x coordinate.");
+    int x = receive_number();
+    uart_sendStr("Please enter bot's starting y coordinate.");
+    int y = receive_number();
+    uart_sendStr("Please enter bot's starting angle.");
+    int angle = receive_number();
+    update_location(x, y, angle);
 }
 
 /**
@@ -96,6 +110,7 @@ void drive(oi_t *sensor)
                 if (strcmp(command, "w") == 0)
                 {
                     user_move_forward(sensor);
+                    uart_receive_server(); // get acknowledgement from client
                 }
                 else if (strcmp(command, "s") == 0)
                 {
@@ -111,11 +126,28 @@ void drive(oi_t *sensor)
                 }
                 else if (strcmp(command, "scan") == 0)
                 {
-                    // TODO::
-                    // scan, gather info on objects
+                    int pings[90];
+                    float IRvals[90];
+                    send180(pings, IRvals);
                 }
+                else if (strcmp(command, "calibrate") == 0)
+                {
+                    findRC(sensor);
+                    // get acknowledgement from
+                    uart_receive_server();
+                }
+//                else if (strcmp(command, "set start") == 0)
+//                {
+//                    set_location();
+//                }
+                uart_sendStr(xLocation);
+                uart_receive_server();
+                uart_sendStr(yLocation);
+                uart_receive_server();
                 repeat = 1;
             }
+
+
         }
         else if (strcmp(command, "auto") == 0)
         {
@@ -123,7 +155,10 @@ void drive(oi_t *sensor)
             uart_sendStr("Entering autonomous mode. Input 'exit' to return to mode selection.");
             while (strcmp(command, "exit") != 0) {
                 if (repeat) uart_sendStr("In autonomous mode. Input 'exit' to return to mode selection.");
-                command = uart_receive_server();
+				directions revDirs[60];
+				reverseDirections(revDirs);
+				followDirections(sensor, revDirs, getNumMoves());
+				command = uart_receive_server();
                 repeat = 1;
             }
         }
@@ -131,8 +166,6 @@ void drive(oi_t *sensor)
             lcd_printf("QUITTING!");
             break;
         }
-        // TODO:: create some kind of message for invalid input.... as it currently stands its easier to just serve same info as first time. maybe thats fine?
-//        else uart_sendStr("Invalid command.");
     }
     oi_free(sensor);
 }
